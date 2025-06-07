@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      background: white;
+      border: 2px dashed #aaa;
+    }
+
+    .grid-item {
+      background-color: #2196f3;
+      color: white;
+      padding: 40px 0;
+      font-size: 24px;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Παράδειγμα Grid Layout</h2>
+
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <div class="info">
+    <p><strong>display: grid</strong> — ενεργοποιεί το grid container.</p>
+    <p><strong>grid-template-columns: repeat(3, 1fr)</strong> — δημιουργεί 3 στήλες ίσου πλάτους.</p>
+    <p><strong>gap: 20px</strong> — απόσταση μεταξύ των στοιχείων.</p>
+  </div>
+
+</body>
+</html>

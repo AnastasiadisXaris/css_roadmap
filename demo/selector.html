@@ -2,14 +2,70 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Demo: Επιλογείς</title>
+  <title>CSS Selectors Demo</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      padding: 20px;
+      color: #333;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    /* Element Selector */
     p {
-      color: blue;
+      color: steelblue;
+    }
+
+    /* Class Selector */
+    .highlight {
+      font-weight: bold;
+      color: darkgreen;
+    }
+
+    /* ID Selector */
+    #special {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    /* Group Selector */
+    h3, .grouped {
+      text-decoration: underline;
+    }
+
+    /* Descendant Selector */
+    div p {
+      font-style: italic;
+    }
+
+    /* Pseudo-class */
+    a:hover {
+      color: red;
     }
   </style>
 </head>
 <body>
-  <p>Αυτό είναι ένα παράδειγμα παραγράφου με μπλε χρώμα.</p>
+
+  <h2>CSS Selectors</h2>
+
+  <p>Αυτό είναι ένα παράδειγμα με <strong>element selector</strong>.</p>
+
+  <p class="highlight">Αυτό είναι με <strong>.class selector</strong>.</p>
+
+  <p id="special">Αυτό είναι με <strong>#id selector</strong>.</p>
+
+  <h3>Ομαδοποιημένος selector (h3, .grouped)</h3>
+  <div class="grouped">Επίσης grouped με class</div>
+
+  <div>
+    <p>Αυτό είναι από <strong>div p (descendant)</strong>.</p>
+  </div>
+
+  <p>Δοκίμασε να <a href="#">περάσεις το ποντίκι</a> πάνω από αυτό το link (hover).</p>
+
 </body>
 </html>
