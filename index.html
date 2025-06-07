@@ -5,93 +5,129 @@
   <title>Μάθημα CSS με Reveal.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal.js CSS -->
+  <!-- Reveal.js Core CSS -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/night.css" id="theme">
 
-  <!-- Highlight.js for code syntax -->
+  <!-- Highlight CSS -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: black;
+      color: white;
+    }
+    h1, h2, h3, p {
+      text-shadow: 0 0 10px #000;
+    }
+    button {
+      background-color: #00c853;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #00b34d;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+  <div class="slides">
 
-      <!-- Εισαγωγική Διαφάνεια -->
-      <section>
-        <h1>Μάθημα CSS</h1>
-        <h3>Από τα Βασικά στα Προχωρημένα</h3>
-        <p>Διάρκεια: 5 ώρες</p>
-      </section>
+    <section data-background-video="https://www.w3schools.com/howto/rain.mp4" data-background-video-muted data-background-video-loop>
+      <h1><i class="fas fa-paint-brush"></i> Μάθημα CSS</h1>
+      <h3>Από τα Βασικά στα Προχωρημένα</h3>
+      <p>Διάρκεια: 5 ώρες</p>
+    </section>
 
-      <!-- Θεματική Ενότητα: Fundamentals -->
-      <section>
-        <section>
-          <h2>Τι είναι το CSS;</h2>
-          <p>Το CSS (Cascading Style Sheets) είναι μια γλώσσα που χρησιμοποιείται για να περιγράψει την εμφάνιση ενός εγγράφου HTML.</p>
-        </section>
-        <section>
-          <h2>Επιλογείς (Selectors)</h2>
-          <pre><code class="language-css">
-/* Επιλογή όλων των παραγράφων */
+    <section data-background-image="https://www.w3schools.com/css/img_lights.jpg" data-background-size="cover">
+      <h2>Μουσική Εμπειρία</h2>
+      <p>Αυτή η διαφάνεια περιέχει υπόκρουση 🎵</p>
+      <audio data-autoplay data-ignore src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </section>
+
+    <section data-background-image="https://www.w3schools.com/css/img_forest.jpg" data-background-size="cover">
+      <h2>Τι είναι το CSS;</h2>
+      <p>Το CSS χρησιμοποιείται για να στυλιζάρουμε HTML περιεχόμενο.</p>
+    </section>
+
+    <section data-background-image="https://www.w3schools.com/css/img_mountains.jpg" data-background-size="cover">
+      <h2>Επιλογείς</h2>
+      <pre><code class="language-css">
 p {
   color: blue;
 }
-          </code></pre>
-          <button onclick="openDemo('demo/selectors.html')">Live Demo</button>
-        </section>
-        <!-- Προσθέστε περισσότερες διαφάνειες για τα βασικά θέματα -->
-      </section>
+      </code></pre>
+      <button onclick="openDemo('demo/selectors.html')">Live Demo</button>
+    </section>
 
-      <!-- Θεματική Ενότητα: Advanced -->
-      <section>
-        <section>
-          <h2>Flexbox</h2>
-          <pre><code class="language-css">
+    <section data-background-image="https://www.w3schools.com/css/img_5terre.jpg" data-background-size="cover">
+      <h2>Flexbox</h2>
+      <pre><code class="language-css">
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-          </code></pre>
-          <button onclick="openDemo('demo/flexbox.html')">Live Demo</button>
-        </section>
-        <section>
-          <h2>Grid Layout</h2>
-          <pre><code class="language-css">
+      </code></pre>
+      <button onclick="openDemo('demo/flexbox.html')">Live Demo</button>
+    </section>
+
+    <section data-background-image="https://www.w3schools.com/css/img_lights.jpg" data-background-size="cover">
+      <h2>Grid Layout</h2>
+      <pre><code class="language-css">
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-          </code></pre>
-          <button onclick="openDemo('demo/grid_layout.html')">Live Demo</button>
-        </section>
-        <!-- Προσθέστε περισσότερες διαφάνειες για τα προχωρημένα θέματα -->
-      </section>
+      </code></pre>
+      <button onclick="openDemo('demo/grid_layout.html')">Live Demo</button>
+    </section>
 
-      <!-- Διαφάνεια με Ασκήσεις -->
-      <section>
-        <h2>Άσκηση</h2>
-        <p>Δημιουργήστε ένα layout με Flexbox που περιλαμβάνει τρία κουτιά σε σειρά.</p>
-        <button onclick="openDemo('demo/exercise1.html')">Live Demo</button>
-      </section>
+    <section data-background-image="https://www.w3schools.com/css/img_forest.jpg" data-background-size="cover">
+      <h2>SVG Animation</h2>
+      <svg width="300" height="300">
+        <circle cx="150" cy="150" r="100" stroke="lime" stroke-width="4" fill="none">
+          <animate attributeName="r" from="50" to="100" dur="1s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </section>
 
-    </div>
+    <section data-background-image="https://www.w3schools.com/css/img_mountains.jpg" data-background-size="cover">
+      <h2>Άσκηση</h2>
+      <p>Φτιάξτε ένα layout με Flexbox και 3 κουτιά σε σειρά</p>
+      <button onclick="openDemo('demo/exercise1.html')">Live Demo</button>
+    </section>
+
   </div>
+</div>
 
-  <!-- Reveal.js Scripts -->
-  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealHighlight ]
-    });
+<!-- Scripts -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'slide',
+    plugins: [ RevealHighlight ]
+  });
 
-    function openDemo(url) {
-      window.open(url, '_blank');
-    }
-  </script>
+  function openDemo(url) {
+    window.open(url, '_blank');
+  }
+</script>
 
 </body>
 </html>
