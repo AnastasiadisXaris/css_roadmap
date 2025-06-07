@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <title>Μάθημα CSS με Reveal.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Highlight.js for code syntax -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Εισαγωγική Διαφάνεια -->
+      <section>
+        <h1>Μάθημα CSS</h1>
+        <h3>Από τα Βασικά στα Προχωρημένα</h3>
+        <p>Διάρκεια: 5 ώρες</p>
+      </section>
+
+      <!-- Θεματική Ενότητα: Fundamentals -->
+      <section>
+        <section>
+          <h2>Τι είναι το CSS;</h2>
+          <p>Το CSS (Cascading Style Sheets) είναι μια γλώσσα που χρησιμοποιείται για να περιγράψει την εμφάνιση ενός εγγράφου HTML.</p>
+        </section>
+        <section>
+          <h2>Επιλογείς (Selectors)</h2>
+          <pre><code class="language-css">
+/* Επιλογή όλων των παραγράφων */
+p {
+  color: blue;
+}
+          </code></pre>
+          <button onclick="openDemo('demo/selectors.html')">Live Demo</button>
+        </section>
+        <!-- Προσθέστε περισσότερες διαφάνειες για τα βασικά θέματα -->
+      </section>
+
+      <!-- Θεματική Ενότητα: Advanced -->
+      <section>
+        <section>
+          <h2>Flexbox</h2>
+          <pre><code class="language-css">
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+          </code></pre>
+          <button onclick="openDemo('demo/flexbox.html')">Live Demo</button>
+        </section>
+        <section>
+          <h2>Grid Layout</h2>
+          <pre><code class="language-css">
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+          </code></pre>
+          <button onclick="openDemo('demo/grid.html')">Live Demo</button>
+        </section>
+        <!-- Προσθέστε περισσότερες διαφάνειες για τα προχωρημένα θέματα -->
+      </section>
+
+      <!-- Διαφάνεια με Ασκήσεις -->
+      <section>
+        <h2>Άσκηση</h2>
+        <p>Δημιουργήστε ένα layout με Flexbox που περιλαμβάνει τρία κουτιά σε σειρά.</p>
+        <button onclick="openDemo('demo/exercise1.html')">Live Demo</button>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js Scripts -->
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealHighlight ]
+    });
+
+    function openDemo(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
